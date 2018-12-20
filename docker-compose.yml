@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  ghost:
+    image: ghost:alpine
+    restart: unless-stopped
+    # ports:
+    #   - 2368:2368
+    volumes:
+      - ./ghost/content:/var/lib/ghost/content
+      - ./ghost/config.production.json:/var/lib/ghost/config.production.json
+      - ./ghost/config.development.json:/var/lib/ghost/config.development.json
+
+  isso:
+    build:
+      context: ./isso
+      dockerfile: Dockerfile
+      args:
+        - HOST=${HOST}
+        - ISSO_PORT=${ISSO_PORT}
+        - SMTP_USER_NAME=${SMTP_USER_NAME}
+        - SMTP_PASSWORD=${SMTP_PASSWORD}
+        - SMTP_HOST=${SMTP_HOST}
+        - SMTP_PORT=${SMTP_PORT}
+        - SMTP_SECURITY=${SMTP_SECURITY}
+        - SMTP_TO=${SMTP_TO}
+        - SMTP_FROM=${SMTP_FROM}
+    volumes:
+      - ./isso/db:/isso/db
+      - ./isso/log:/isso/log
+    # ports:
+    #   - 8080:8080
+
+  nginx:
+    restart: unless-stopped
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+
