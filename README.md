@@ -7,6 +7,9 @@ stacks: docker, ghost, isso
 ```code .env```
 fill the build args specified in docker-compose.yml as key=value
 
+```code ./ghost/content/themes/casper-xyz-master/post.hbs```
+change url in line 79 to be your own domain name
+
 ### Deploy
 ```docker-compose up```
 ### Shutdown
