@@ -5,7 +5,7 @@ services:
     image: ghost:alpine
     restart: unless-stopped
     environment:
-      NODE_ENV:
+      - NODE_ENV:
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
@@ -28,8 +28,6 @@ services:
     volumes:
       - ./isso/db:/isso/db
       - ./isso/log:/isso/log
-    # ports:
-    #   - 8080:8080
 
   nginx:
     restart: unless-stopped
