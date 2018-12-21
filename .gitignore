@@ -1,6 +1,7 @@
 .env
 ghost.db
 comments.db
+*.log
 
 nginx_origin.conf
 nginx_origin2.conf
