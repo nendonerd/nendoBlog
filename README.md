@@ -25,7 +25,7 @@ Isso is one of them. But integrating Isso is really crazy, so I need to use dock
 - ✔︎ fix url issues
 - add https support
 - create a mask for guiding wechat user to open in browser
-- auto backup(sync) ghost/content & isso/db/comments.db
+- auto backup(sync) ghost/content & isso/db/comments.db to local
 - auto add isso script to any scheme
 - make a todo list tool for the blog
 - make some logo
