@@ -5,7 +5,7 @@ services:
     image: ghost:alpine
     restart: unless-stopped
     environment:
-      - NODE_ENV: "production"
+      - NODE_ENV
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
