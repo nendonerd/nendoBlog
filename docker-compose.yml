@@ -37,9 +37,11 @@ services:
     ports:
       - 80:80
       - 443:443
-    volumes:
-      - /etc/letsencrypt/live/nendo.ml/:/etc/letsencrypt/live/nendo.ml/
-      - /etc/letsencrypt/
+    # volumes:
+    #   - /etc/letsencrypt/live/nendo.ml/fullchain.pem:/etc/letsencrypt/live/nendo.ml/fullchain.pem
+    #   - /etc/letsencrypt/live/nendo.ml/privkey.pem:/etc/letsencrypt/live/nendo.ml/privkey.pem
+    #   - /etc/letsencrypt/options-ssl-nginx.conf:/etc/letsencrypt/options-ssl-nginx.conf
+    #   - /etc/letsencrypt/ssl-dhparams.pem:/etc/letsencrypt/ssl-dhparams.pem
 
 
 
