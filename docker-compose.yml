@@ -25,9 +25,11 @@ services:
         - SMTP_SECURITY=${SMTP_SECURITY}
         - SMTP_TO=${SMTP_TO}
         - SMTP_FROM=${SMTP_FROM}
+    restart: unless-stopped
     volumes:
       - ./isso/db:/isso/db
       - ./isso/log:/isso/log
+
 
   nginx:
     restart: unless-stopped

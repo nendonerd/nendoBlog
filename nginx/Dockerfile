@@ -15,6 +15,7 @@ FROM nginx:alpine
 # COPY ./cert/fullchain.pem /etc/nginx/https/fullchain.pem
 # COPY ./cert/key.pem /etc/nginx/https/key.pem
 
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 # VOLUME ["/etc/letsencrypt/live/nendo.ml/fullchain.pem", "/etc/letsencrypt/live/nendo.ml/privkey.pem", "/etc/letsencrypt/options-ssl-nginx.conf", "/etc/letsencrypt/ssl-dhparams.pem"]

@@ -5,5 +5,5 @@ comments.db
 
 nginx_origin.conf
 nginx_origin2.conf
-nginx.conf
+nginx.obso.conf
 nginx.conf.pro
