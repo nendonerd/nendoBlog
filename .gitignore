@@ -1,3 +1,8 @@
 .env
 ghost.db
 comments.db
+
+nginx_origin.conf
+nginx_origin2.conf
+nginx.conf
+nginx.conf.pro
