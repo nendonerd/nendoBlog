@@ -16,6 +16,7 @@ services:
       context: ./isso
       dockerfile: Dockerfile
       args:
+        - HOST=${HOST}
         - ISSO_HOST=${ISSO_HOST}
         - ISSO_PORT=${ISSO_PORT}
         - SMTP_USER_NAME=${SMTP_USER_NAME}
