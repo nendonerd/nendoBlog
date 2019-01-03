@@ -1,5 +1,5 @@
 # A blog to host my fancy hacks
-stacks: docker, ghost, isso
+stacks: docker, nginx, ghost, isso
 
 ## Usage
 
