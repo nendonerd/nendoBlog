@@ -1,7 +1,0 @@
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":40,"msg":"Theme's file locales/en.json not found. ","time":"2018-12-21T17:04:55.249Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":30,"msg":"Ghost is running in development... ","time":"2018-12-21T17:04:55.711Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":30,"msg":"Listening on: 0.0.0.0:2368 ","time":"2018-12-21T17:04:55.712Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":30,"msg":"Url configured as: http://nendo.ml/ ","time":"2018-12-21T17:04:55.713Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":30,"msg":"Ctrl+C to shut down ","time":"2018-12-21T17:04:55.714Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":30,"msg":"Ghost boot 2.428s ","time":"2018-12-21T17:04:55.716Z","v":0}
-{"name":"Log","hostname":"298c5d8c7d76","pid":1,"level":40,"msg":"Ghost has shut down ","time":"2018-12-21T17:04:58.158Z","v":0}

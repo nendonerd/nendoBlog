@@ -22,12 +22,12 @@ Isso is one of them. But integrating Isso is really crazy, so I need to use dock
 
 
 ## Todo List:
-- ✔︎ fix url issues
-- ✔︎ add https support
-- create a mask for guiding wechat user to open in browser
-- auto backup(sync) ghost/content & isso/db/comments.db to local
-- learn handlebar and modify the theme
-- auto add isso script to any scheme
-- make a todo list tool for the blog
-- make some logo
-- rebuild a fully customized frontend using gatsby
+- [x] fix url issues
+- [x] add https support
+- [ ] create a mask for guiding wechat user to open in browser
+- [ ] auto backup(sync) ghost/content & isso/db/comments.db to local
+- [ ] learn handlebar and modify the theme
+- [ ] auto add isso script to any scheme
+- [ ] make a todo list tool for the blog
+- [ ] make some logo
+- [ ] rebuild a fully customized frontend using gatsby
