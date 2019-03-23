@@ -41,6 +41,7 @@ RUN apk add --update gettext && \
   cp /usr/bin/envsubst /usr/local/bin/envsubst && \
   apk del build_deps
 
+ARG HOST
 ARG ISSO_HOST
 ARG ISSO_PORT
 ARG SMTP_USER_NAME
