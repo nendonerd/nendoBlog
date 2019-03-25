@@ -75,10 +75,23 @@ into the {body} of the default.hbs template --}}
 
             </footer>
 
-            {{!-- Isso pro(hardcoded) --}}
-            <script data-isso="https://nendo.ml/isso" src="https://nendo.ml/isso/js/embed.min.js"></script>
-            {{!-- Isso dev(hardcoded) --}}
-            {{!-- <script data-isso="http://localhost:3000/isso" src="http://localhost:3000/isso/js/embed.min.js"></script> --}}
+            {{!-- dynamically load Isso based on url --}}
+            <script>
+                {
+                    let development = "http://localhost:3000/"
+                    let production = "https://nendo.ml/"
+                    let script = document.createElement('script')
+
+                    const setEnv = env => {
+                        script.setAttribute('data-isso', env + 'isso')
+                        script.setAttribute('src', env + 'isso/js/embed.min.js')
+                    }
+
+                    location.href.match('localhost') ? setEnv(development) : setEnv(production)
+
+                    document.querySelector('.post-full').append(script)
+                }
+            </script>
 
             <section id="isso-thread"></section>
 
@@ -142,7 +155,7 @@ into the {body} of the default.hbs template --}}
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
-{{#contentFor "scripts"}}
+{{!-- {{#contentFor "scripts"}}
 <script>
 
 // NOTE: Scroll performance is poor in Safari
@@ -207,4 +220,4 @@ $(document).ready(function () {
 
 });
 </script>
-{{/contentFor}}
+{{/contentFor}} --}}
