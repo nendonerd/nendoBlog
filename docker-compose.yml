@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV
-      - url=https://nendo.ml
+      - url=https://nendo.co
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
@@ -17,7 +17,7 @@ services:
       context: ./isso
       dockerfile: Dockerfile
       args:
-        - HOST=https://nendo.ml
+        - HOST=https://nendo.co
         - ISSO_HOST=${ISSO_HOST}
         - ISSO_PORT=${ISSO_PORT}
         - SMTP_USER_NAME=${SMTP_USER_NAME}
@@ -42,7 +42,10 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /etc/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt/live/nendo.co/fullchain.pem:/etc/letsencrypt/live/nendo.co/fullchain.pem
+      - /etc/letsencrypt/live/nendo.co/privkey.pem:/etc/letsencrypt/live/nendo.co/privkey.pem
+      - /etc/letsencrypt/options-ssl-nginx.conf:/etc/letsencrypt/options-ssl-nginx.conf
+      - /etc/letsencrypt/ssl-dhparams.pem:/etc/letsencrypt/ssl-dhparams.pem
 
 
 
