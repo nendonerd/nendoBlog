@@ -10,9 +10,9 @@ It's like gluing a bunch of slippery stuff. There're lots of steps to make sure 
 ## Things I choose to use
 stacks: docker, docker-compose, nginx, ghost, isso
 
-Although wordpress is easy to use, but I'm not familiar with PHP. Instead I try to use it's modern nodejs alternative -- ghost. But ghost is not the subsitition of wordpress, it does not have many feature integrated, including comment system.
+Although wordpress is easy to use, but I'm not familiar with PHP. Instead I try to use it's modern nodejs alternative -- ghost. But ghost is not the subsitition of wordpress, it does not have many feature integrated, such as a comment system.
 I don't like the idea of using a 3rd party comment system like Discord. They're usually slow to lauch, and who knows what they will do to your site. Weirdly, as for self-host comment systems, there are little choice.
-Isso is one of them. But integrating Isso is really crazy, so I need to use docker to make ghost and isso work together, once and for all.
+Isso is one of them. But integrating Isso is really crazy, so I need to use docker to automate some steps and make them work together, once and for all.
 
 
 ## Deploy in development ENV
