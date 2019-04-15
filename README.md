@@ -43,7 +43,7 @@ Isso is one of them. But integrating Isso is really crazy, so I need to use dock
 ### 2. Download and run init.sh
   server$
   ```
-  wget
+  wget https://raw.githubusercontent.com/nendonerd/nendoBlog/master/tasks/init.sh
   sudo chmod 777 init.sh
   ./init.sh
   ```
