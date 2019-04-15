@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=development
-      - url=http://localhost:3000
+      - url=${DEV_HOST}
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
@@ -17,7 +17,7 @@ services:
       context: ./isso
       dockerfile: Dockerfile
       args:
-        - HOST=http://localhost:3000
+        - DEV_HOST=${DEV_HOST}
         - ISSO_HOST=${ISSO_HOST}
         - ISSO_PORT=${ISSO_PORT}
         - SMTP_USER_NAME=${SMTP_USER_NAME}
@@ -39,4 +39,4 @@ services:
       context: ./nginx
       dockerfile: Dockerfile.dev
     ports:
-      - 3000:3000
+      - ${DEV_HOST_PORT}:${DEV_CONTAINER_PORT}

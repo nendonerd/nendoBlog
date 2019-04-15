@@ -5,8 +5,8 @@ services:
     image: ghost:alpine
     restart: unless-stopped
     environment:
-      - NODE_ENV
-      - url=https://nendo.co
+      - NODE_ENV=production
+      - url=${PRO_HOST}
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
@@ -17,7 +17,7 @@ services:
       context: ./isso
       dockerfile: Dockerfile
       args:
-        - HOST=https://nendo.co
+        - PRO_HOST=${PRO_HOST}
         - ISSO_HOST=${ISSO_HOST}
         - ISSO_PORT=${ISSO_PORT}
         - SMTP_USER_NAME=${SMTP_USER_NAME}
@@ -39,11 +39,10 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-      - 80:80
-      - 443:443
+      - ${PRO_HOST_PORT}:${PRO_CONTAINER_PORT}
     volumes:
-      - /etc/letsencrypt/live/nendo.co/fullchain.pem:/etc/letsencrypt/live/nendo.co/fullchain.pem
-      - /etc/letsencrypt/live/nendo.co/privkey.pem:/etc/letsencrypt/live/nendo.co/privkey.pem
+      - /etc/letsencrypt/live/nendo.co/fullchain.pem:/etc/letsencrypt/live/${PRO_HOST_DOMAIN}/fullchain.pem
+      - /etc/letsencrypt/live/nendo.co/privkey.pem:/etc/letsencrypt/live/${PRO_HOST_DOMAIN}/privkey.pem
       - /etc/letsencrypt/options-ssl-nginx.conf:/etc/letsencrypt/options-ssl-nginx.conf
       - /etc/letsencrypt/ssl-dhparams.pem:/etc/letsencrypt/ssl-dhparams.pem
 
