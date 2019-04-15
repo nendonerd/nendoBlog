@@ -25,11 +25,11 @@ Isso is one of them. But integrating Isso is really crazy, so I need to use dock
  - 1. create a new vm on GCP
 
  - 2. set up ssh-key config:
-        client$ `cat ~/.ssh/id_rsa.pub | pbcopy` , which will copy your client pubkey to clipboard. then you ssh to the server
-        server$ `vim  ~/.ssh/authorized_keys`, which will create a new file, and paste the pubkey.
-        GCP_console > metadata > ssh keys > paste your client pubkey into it
-        mind for \n !!! ; And in both server and console, change pubkey's last field from client's username to server's username (you can check them by `echo $USER`)
-        https://nabtron.com/gcc-mac-terminal/
+      client$ `cat ~/.ssh/id_rsa.pub | pbcopy` , which will copy your client pubkey to clipboard. then you ssh to the server
+      server$ `vim  ~/.ssh/authorized_keys`, which will create a new file, and paste the pubkey.
+      GCP_console > metadata > ssh keys > paste your client pubkey into it
+      mind for \n !!! ; And in both server and console, change pubkey's last field from client's username to server's username (you can check them by `echo $USER`)
+      https://nabtron.com/gcc-mac-terminal/
 
  - 3. buy a domain at godaddy, and set the domain name server to (at domain management panel)
         asa.ns.cloudflare.com
@@ -75,11 +75,11 @@ or
 ## Todo List:
 - [x] fix url issues
 - [x] add https support
+- [x] auto backup(sync) ghost/content & isso/db/comments.db to local
+- [x] auto add isso script for both dev & prod env
 - [ ] make a vscode plugin to upload md files to ghost(should auto compress img and upload them too)
+- [ ] rebuild a fully customized frontend using gatsby
 - [ ] create a mask for guiding wechat user to open in browser
-- [ ] auto backup(sync) ghost/content & isso/db/comments.db to local
 - [ ] learn handlebar and modify the theme
-- [ ] auto add isso script to any scheme
 - [ ] make a todo list tool for the blog
 - [ ] make some logo
-- [ ] rebuild a fully customized frontend using gatsby
